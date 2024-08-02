@@ -46,6 +46,7 @@ header nav input {
 .hero {
   position: relative;
   text-align: center;
+  top: 50px;
   color: #4CAF50;
 }
 
@@ -71,12 +72,12 @@ header nav input {
   display: inline-block;
   transition: background-color 0.3s;
 }
-.hero .cta-button:hover{
+.hero .cta-button:hover {
   background-color: rgb(160, 126, 6);
 }
 
 .featured-games, .benefits, .testimonials, .cta, footer {
-  padding: 2em;
+  padding: 3em;
   text-align: center;
 }
 
@@ -108,9 +109,9 @@ header nav input {
   display: inline-block;
   margin-top: 0.5em;
   transition: background-color 0.3s;
-  
 }
-.game-card .play-button:hover {
+
+.play-button:hover {
   background-color: #306636;
 }
 
@@ -128,34 +129,48 @@ footer .social-media img {
   margin: 0 10px;
 }
 
-.game{
-  margin: 5px;
-  padding: 5px;
-}
-#numberMemory{
-  margin: 5px;
-  padding: 5px;
-}
-.allgamename{
-  margin: 5px;
-  padding: 5px;
-}
-#viewMore{
-  align-items: center;
-  
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  .games-container, .benefits-container, .testimonials-container {
+    flex-direction: column;
+  }
+
+  .game-card, .benefit-item, .testimonial {
+    max-width: 100%;
+  }
 }
 
+@media (max-width: 480px) {
+  header .logo img {
+    height: 50px;
+  }
 
+  header nav ul {
+    flex-direction: column;
+  }
 
-/* About Section  */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  .hero .hero-text {
+    top: 20%;
+  }
+
+  .games-container, .benefits-container, .testimonials-container {
+    flex-direction: column;
+  }
+
+  .game-card, .benefit-item, .testimonial {
+    max-width: 100%;
+  }
 }
 
+/* About Section */
 .about-section {
   background-color: #fff;
   padding: 20px;
@@ -198,20 +213,13 @@ body {
 }
 
 .about-images img {
-  width: 1000%;
+  width: 100%;
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*Support*/
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
 
+/* Support Section */
 .support-section {
   background-color: #fff;
   padding: 20px;
@@ -312,7 +320,6 @@ form button:hover {
   background-color: #004999;
 }
 
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -412,4 +419,3 @@ footer {
   background-color: #333;
   color: #fff;
 }
-
